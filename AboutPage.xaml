@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParcNautic.AboutPage"
+             Title="About Page">
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="20">
+            <Frame BackgroundColor="LightBlue" CornerRadius="10" Padding="10">
+                <HorizontalStackLayout Spacing="10">
+                    <Image Source="barca.png"
+                           SemanticProperties.Description="Parc Nautic"
+                           HeightRequest="64" />
+                    <VerticalStackLayout>
+                        <Label FontSize="22" FontAttributes="Bold" Text="Parc Nautic" />
+                        <Label FontSize="16" Text="v11.3" />
+                    </VerticalStackLayout>
+                </HorizontalStackLayout>
+            </Frame>
+            <Label Text="Final version" 
+                   FontSize="18" 
+                   HorizontalOptions="CenterAndExpand" />
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

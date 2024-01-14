@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ParcNautic.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="nautic.png"
+                SemanticProperties.Description="d"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                Text="Nautic"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center"
+                TextColor="DarkBlue" />
+
+            <Label
+                Text="Planifica activitatile tale nautice"
+                SemanticProperties.HeadingLevel="Level2"
+                FontSize="18"
+                HorizontalOptions="Center"
+                TextColor="DarkGreen" />
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

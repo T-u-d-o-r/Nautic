@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ParcNautic"
+             x:Class="ParcNautic.PlanPage"
+             Title="Rezervare">
+
+    <ScrollView>
+        <StackLayout Spacing="20" Padding="20">
+
+            <Label Text="Data rezervare:" FontAttributes="Bold" />
+            <DatePicker Date="{Binding BeginDate}" BackgroundColor="LightBlue" />
+
+            <Label Text="Sfarsit rezervare:" FontAttributes="Bold" />
+            <DatePicker Date="{Binding EndDate}" BackgroundColor="LightBlue" />
+
+            <Label Text="Numar persoane:" FontAttributes="Bold" />
+            <Entry Text="{Binding NumberOfPeople}" Placeholder="Numar persoane" Keyboard="Numeric" BackgroundColor="LightBlue" />
+
+            <Label Text="Descriere" FontAttributes="Bold" />
+            <Editor Text="{Binding Description}" HeightRequest="100" BackgroundColor="LightBlue" />
+
+            <Label Text="Activitate:" FontAttributes="Bold" />
+            <Picker x:Name="NauticZqPicker" Title="Alege" SelectedItem="{Binding Activity}" BackgroundColor="LightBlue" />
+
+            <Button Text="Salveaza" Clicked="OnSaveButtonClicked" BackgroundColor="DarkBlue" TextColor="White" />
+            <Button Text="Sterge" Clicked="OnDeleteButtonClicked" BackgroundColor="Red" TextColor="White" />
+
+            <ListView x:Name="listView" BackgroundColor="LightBlue">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Detail="{Binding Description}" TextColor="DarkBlue" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
